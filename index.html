@@ -6,6 +6,7 @@
 -->
 <html lang="RU">
 	<head>
+    <font face="raleway"> </font>
 		<title>Школа Тренинга</title>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -119,20 +120,29 @@
 						<h2>Оставайся на связи</h2>
 						<p>Если тебя заинтересовали наши проекты, то оставь свою почту. Мы напишем, когда откроется регистрация!</p>
 					</header>
-					<form action="#" method="POST">
-						<div class="container 75%">
-							<div class="row uniform 50%">
-								<div class="6u 12u$(xsmall)">
-									<input name="name" placeholder="Имя" type="text" />
-								</div>
-								<div class="6u$ 12u$(xsmall)">
-									<input name="email" placeholder="Почта" type="email" />
-								</div>
-								<div class="12u$">
-									<textarea name="message" placeholder="Какие проекты тебя заинтересовали?" rows="4"></textarea>
-								</div>
+					<form id="myform" method="post">
+<label>Твоё имя</label>
+<input type="text" name="Твоё имя" />
+<label>Твоя почта</label>
+<input type="email" name="Твоя почта" />
+<label>Какие проекты тебя заинтересовали?</label>
+<input type="text" name="Какие проекты тебя заинтересовали?" />
+<br><br>
+<button>
+Отправить
+</button>
+</form>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_HnvAkNNKjVHw8elz3XW9z");
+   })();
 							</div>
 						</div>
+
 						<ul class="actions">
 							<li><input type="submit" class="special" value="Отправить" /></li>
 						</ul>
