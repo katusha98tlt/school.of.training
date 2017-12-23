@@ -55,64 +55,6 @@
 
 	});
 
-	// Change to your service ID, or keep using the default service
-	var myform = $("form#myform");
-myform.submit(function(event){
-	event.preventDefault();
-
-  // Change to your service ID, or keep using the default service
-  var service_id = "default_service";
-  var template_id = "template_I5bQPdXl";
-
-  myform.find("button").text("Отправляется...");
-  emailjs.sendForm(service_id,template_id,"myform")
-  	.then(function(){
-    	alert("Спасибо, что заинтересовались нашими проектами! Мы сообщим вам, как только начнется регистрация!");
-       myform.find("button").text("Send");
-    }, function(err) {
-       alert("Что-то пошло не так, попробуйте отправить форму еще раз... " + JSON.stringify(err));
-       myform.find("button").text("Send");
-    });
-  return false;
-});
-
-var controls = document.querySelectorAll('.controls');
-for(var i=0; i<controls.length; i++){
-controls[i].style.display = 'inline-block';
-}
-
-var slides = document.querySelectorAll('#slides .slide');
-var currentSlide = 0;
-var slideInterval = setInterval(nextSlide,2000);
-
-function nextSlide(){
-goToSlide(currentSlide+1);
-}
-
-function previousSlide(){
-goToSlide(currentSlide-1);
-}
-
-function goToSlide(n){
-slides[currentSlide].className = 'slide';
-currentSlide = (n+slides.length)%slides.length;
-slides[currentSlide].className = 'slide showing';
-}
-
-var playing = true;
-var pauseButton = document.getElementById('pause');
-
-function pauseSlideshow(){
-pauseButton.innerHTML = '&#9658;'; // play character
-playing = false;
-clearInterval(slideInterval);
-}
-
-function playSlideshow(){
-pauseButton.innerHTML = '&#10074;&#10074'; // pause character
-playing = true;
-slideInterval = setInterval(nextSlide,2000);
-}
 
 var $form = $('form#test-form'),
     url = 'https://script.google.com/macros/s/AKfycbxUC6s2_mk_ETqAnGzTPVLi_1Nr3Tyo8AlHsJcDcym6YddaP7c/exec'
@@ -128,5 +70,16 @@ $('#submit-form').on('click', function(e) {
     // do something
   );
 })
+
+myform.find("button").text("Отправляется...");
+.then(function(){
+alert("Спасибо, что заинтересовались нашими проектами! Мы сообщим вам, как только начнется регистрация!");
+myform.find("button").text("Send");
+}, function(err) {
+alert("Что-то пошло не так, попробуйте отправить форму еще раз... " + JSON.stringify(err));
+myform.find("button").text("Send");
+});
+return false;
+});
 
 })(jQuery);
