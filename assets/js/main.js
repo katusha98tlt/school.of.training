@@ -64,7 +64,7 @@ myform.submit(function(event){
   var service_id = "default_service";
   var template_id = "template_I5bQPdXl";
 
-  myform.find("button").text("Отпавляется...");
+  myform.find("button").text("Отправляется...");
   emailjs.sendForm(service_id,template_id,"myform")
   	.then(function(){
     	alert("Спасибо, что заинтересовались нашими проектами! Мы сообщим вам, как только начнется регистрация!");
@@ -114,5 +114,19 @@ playing = true;
 slideInterval = setInterval(nextSlide,2000);
 }
 
+var $form = $('form#test-form'),
+    url = 'https://script.google.com/macros/s/AKfycbxUC6s2_mk_ETqAnGzTPVLi_1Nr3Tyo8AlHsJcDcym6YddaP7c/exec'
+
+$('#submit-form').on('click', function(e) {
+  e.preventDefault();
+  var jqxhr = $.ajax({
+    url: url,
+    method: "GET",
+    dataType: "json",
+    data: $form.serializeObject()
+  }).success(
+    // do something
+  );
+})
 
 })(jQuery);

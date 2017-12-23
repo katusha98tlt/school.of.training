@@ -6,7 +6,7 @@
 -->
 <html lang="RU">
 	<head>
-    <font face="raleway"> </font>
+		<font face="raleway"> </font>
 		<title>Школа Тренинга</title>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -24,21 +24,23 @@
 		<meta property="og:url" content="https://katusha98tlt.github.io/school.of.training/" />
 		<meta property="og:description" content="Ты старшеклассник, и хочешь определиться с выбором факультета? Уже учишься в Вышке, и хочешь активную студенческую жизнь? Скорее переходи на сайт!" />
 		<meta property="og:image" content="images/banner.jpg" />
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.serialize-object.min.js"></script>
 	</head>
 	<body class="landing">
 
 		<!-- Header -->
 			<header id="header" class="alt">
-				<h1><a href="index.html">Школа Тренинга</a></h1>
+				<h1><a href="sht.html">Школа Тренинга</a></h1>
 				<a href="#nav">Меню</a>
 			</header>
 
 		<!-- Nav -->
 			<nav id="nav">
 				<ul class="links">
-					<li><a href="index.html">Главная</a></li>
-					<li><a href="generic.html">Студентам</a></li>
-					<li><a href="elements.html">Школьникам</a></li>
+					<li><a href="sht.html">Главная</a></li>
+					<li><a href="students.html">Студентам</a></li>
+					<li><a href="pupils.html">Школьникам</a></li>
 				</ul>
 			</nav>
 
@@ -62,7 +64,7 @@
 						<p> Профориентационные проекты, которые помогают старшеклассникам не только определиться с будущей профессией, но и раскрыть себя как личность.</p>
 						<ul class="actions">
 							<li>
-								<a href="https://katusha98tlt.github.io/school.of.training/elements.html" class="button alt">Ещё</a>
+								<a href="https://katusha98tlt.github.io/school.of.training/pupils.html" class="button alt">Ещё</a>
 							</li>
 						</ul>
 					</div>
@@ -74,7 +76,7 @@
 						<p>Развлекательные и тимбилдинговые проекты для студентов. Выезды, походы, школы - наполни свою студенческую жизнь эмоциями!</p>
 						<ul class="actions">
 							<li>
-								<a href="https://katusha98tlt.github.io/school.of.training/generic.html" class="button alt">Ещё</a>
+								<a href="https://katusha98tlt.github.io/school.of.training/students.html" class="button alt">Ещё</a>
 							</li>
 						</ul>
 					</div>
@@ -128,7 +130,7 @@
 <label>Какие проекты тебя заинтересовали?</label>
 <input type="text" name="Какие проекты тебя заинтересовали?" />
 <br><br>
-<button>
+<button type="submit"id="submit-form">
 Отправить
 </button>
 </form>
