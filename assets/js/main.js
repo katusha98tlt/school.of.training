@@ -71,15 +71,5 @@ $('#submit-form').on('click', function(e) {
   );
 })
 
-myform.find("button").text("Отправляется...");
-.then(function(){
-alert("Спасибо, что заинтересовались нашими проектами! Мы сообщим вам, как только начнется регистрация!");
-myform.find("button").text("Send");
-}, function(err) {
-alert("Что-то пошло не так, попробуйте отправить форму еще раз... " + JSON.stringify(err));
-myform.find("button").text("Send");
-});
-return false;
-});
 
 })(jQuery);
